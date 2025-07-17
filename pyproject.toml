@@ -17,5 +17,6 @@ dependencies = [
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
 [project.scripts]
 jetstream = "bsky_jetstream.jetstream:jetstream"
