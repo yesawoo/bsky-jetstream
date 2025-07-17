@@ -1,5 +1,5 @@
 import pytest
-from src.bsky_jetstream import jetstream
+from src.jetstream import jetstream
 
 
 def test_raw_handle():

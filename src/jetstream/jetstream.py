@@ -9,11 +9,6 @@
 #     "zstandard",
 # ]
 # ///
-from .handle_resolver import require_resolve_handle_to_did
-from .zstd_utils import get_zstd_decompressor
-from .url_utils import get_public_jetstream_base_url, get_jetstream_query_url
-import os
-import platform
 import typing as t
 from pathlib import Path
 from urllib.parse import urlencode
@@ -22,9 +17,9 @@ import click
 import zstandard as zstd
 from httpx_ws import connect_ws
 
-#
-# Utilities to form Jetstream URLs.
-#
+from .handle_resolver import require_resolve_handle_to_did
+from .url_utils import get_jetstream_query_url, get_public_jetstream_base_url
+from .zstd_utils import get_zstd_decompressor
 
 
 PUBLIC_URL_FMT = "wss://jetstream{instance}.{geo}.bsky.network/subscribe"
